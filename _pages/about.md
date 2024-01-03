@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <i>👋 Hi, nice to meet you! </i> 
+subtitle: <i>👋 Nice to meet you! </i> 
 
 profile:
   align: right
@@ -20,4 +20,6 @@ My name is Claudia. I'm a PhD student at [Carnegie Mellon University](https://ww
   
 My primary interests lie in the application of <b>Large Language Models</b> to ensure <b>Code Quality and Safety</b>. I am particularly interested in vulnerability detection and, more recently, automated program repair and patch generation. 
 
-If you have any questions or just want to chat -- [hit me up](mailto:cmamede@andrew.cmu.edu)! I'm always happy to discuss ✨ new ideas ✨
+<small color='grey'>If you have any questions or just want to chat -- [hit me up](mailto:cmamede@andrew.cmu.edu)! I'm always happy to discuss ✨ new ideas ✨</small>
+
+<br>

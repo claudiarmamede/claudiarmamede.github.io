@@ -106,6 +106,7 @@ wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.
 
 contact_note: >
 Get in touch :)
+
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
 # -----------------------------------------------------------------------------

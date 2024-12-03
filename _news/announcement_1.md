@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2023-12-07 15:59:00-0400
+date: 2024-04-01 15:59:00-0400
 inline: true
 related_posts: false
 ---
 
-🏆 Best Poster Award at CMU Portugal Doctoral Symposium
+🌎 Volunteered at ICSE 24 in Lisbon, PT

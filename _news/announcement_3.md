@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2023-05-31 07:59:00-0400
+date: 2023-06-26 15:59:00-0400
 inline: true
 related_posts: false
 ---
 
-🏆 1st place at Green Hackathon 2023
+🐛 Masterclass with [Ben Sadeghipour](https://gotoams.nl/2023/speakers/2506/ben-sadeghipour) at GOTO Amsterdam 2023

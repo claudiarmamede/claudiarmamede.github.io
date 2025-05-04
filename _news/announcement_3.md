@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🐛 Masterclass with [Ben Sadeghipour](https://gotoams.nl/2023/speakers/2506/ben-sadeghipour) at GOTO Amsterdam 2023
+🧠 Our paper ["Are Large Language Models Memorizing Bug Benchmarks"](https://arxiv.org/abs/2411.13323) just got accepted at LLM4CODE 🇨🇦 

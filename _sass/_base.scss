@@ -265,6 +265,35 @@ blockquote {
     }
   }
 
+  .navbar-nav .nav-item .cv-download {
+    --cv-tag-bg: #1754c5;
+    --cv-tag-text: #fff;
+
+    html[data-theme='dark'] & {
+      --cv-tag-bg: #f78ccf;
+      --cv-tag-text: #301225;
+    }
+
+    display: inline-block;
+    margin: .25rem;
+    padding: .1875rem .625rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background-color: var(--cv-tag-bg);
+    color: var(--cv-tag-text);
+    font-weight: 600;
+
+    &:hover {
+      color: var(--cv-tag-text);
+      filter: brightness(.92);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--cv-tag-bg);
+      outline-offset: 2px;
+    }
+  }
+
   .navbar-nav .nav-item.active>.nav-link {
     background-color: inherit;
     font-weight: bolder;

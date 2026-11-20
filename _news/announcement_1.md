@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-✅ Our paper ["Interpretable Vulnerability Detection Reports"]() was accepted at ASE'25! 🇰🇷
+Read our ASE 2025 paper [Interpretable Vulnerability Reports]({{ '/publications/ase-25/' | relative_url }}).

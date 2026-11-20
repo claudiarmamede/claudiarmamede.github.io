@@ -3,13 +3,43 @@
 
 @string{aps = {American Physical Society,}}
 
-@misc{issta_2025,
+@misc{jev4vuln2026,
+  author = {Mamede, Claudia and Martins, Ruben and Le Goues, Claire and Abreu, Rui},
+  title  = {Exploring Decision Models for Vulnerability Analysis},
+  year   = {2026},
+  note   = {Under submission},
+  pdf    = {jev4vuln.pdf},
+  abstract     = {Verdicts on security vulnerabilities alone give an incomplete picture of a model’s capabilities: it may respond to a fix or locate a weakness even when it misclassifies the code. We investigate these distinctions for Jev, a decision model that returns answer probabilities without generating text. We construct 171 audited vulnerable–safe pairs from CVEs disclosed in 2026, consolidating shared and incomplete fixes and excluding fixed versions that remain vulnerable. We annotate 369 vulnerable paths using NIST’s Bugs Framework (BF), linking source locations to weakness causes, operations, and consequences. These annotations support evaluating fix sensitivity, localization, and weakness classification on the same examples, and analyzing errors by weakness type. Jev’s observed detection accuracy is close to luna’s (61.7\% versus 62.3\%) with about a quarter of the tokens, but it classifies both versions correctly in only 25.7\% of pairs. Yet it gives the vulnerable version the higher vulnerability probability in 73.1\% of pairs: Jev responds to fixes even when its verdicts hide that signal. Jev also locates weaknesses it fails to detect: its ten highest-ranked lines include an annotated weakness site in 87.9\% of eligible samples, including 83.3\% of those missed by detection. Errors vary by weakness type, with frequent misses on incorrectly implemented checks. On paths annotated with both components, consequence classification reaches 71.5\% accuracy versus 49.9\% for causes. Together, these results show that Jev’s probabilities carry information about fixes and weakness locations that a single accuracy score hides.},
+}
+
+@inproceedings{melo2026relational,
+  author    = {Melo, Rui and Catarino, Andr{\'e} and Mamede, Cl{\'a}udia and Pasareanu, Corina S. and Abreu, Rui},
+  title     = {When Models Know but Can't Linearly Say: Relational Encoding Limits Linear Vulnerability Classification in Code {LLMs}},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2026},
+  year      = {2026},
+  url       = {https://rufimelo99.github.io/preprints/2026_EMNLP_When_Models_Know_but_Can_t_Say__Relational_Encoding_Limits_Vulnerability_Classification_in_Code_LLMs.pdf},
+  pdf       = {emnlp26.pdf},
+  abstract     = {Large language models can detect vulnerable code, yet the form of vulnerability encoding in their representations remains unclear. We analyze 8 code models spanning 6.7B–15B parameters on C programs using three datasets (DeltaSecCommits, SVEN, and PreciseBugs), comparing two diagnostic tasks on the same representations: identifying what patterns the code instantiates, and determining whether it is vulnerable. Models encode the first with high fidelity. Under the studied paired C-code datasets and linear-probing setup, vulnerability information is more accessible as a paired relational signal—whether code A is riskier than code B—than as a globally separable categorical label. This structural difference has implications for classification: the model reliably ranks which code is riskier but standard classifiers on isolated samples achieve limited accuracy because vulnerable and secure samples form overlapping distributions in representation space.},
+}
+
+@inproceedings{catarino2026tracecaps,
+  author    = {Catarino, Andr{\'e} and Mamede, Cl{\'a}udia and Melo, Rui and Abreu, Rui},
+  title     = {{TraceCaps}: Inline Provenance and Risk Enforcement for Agentic Software Engineering},
+  booktitle = {2026 IEEE/ACM 48th International Conference on Software Engineering (ICSE-NIER)},
+  year      = {2026},
+  pages     = {166--170},
+  publisher = {Association for Computing Machinery},
+  doi       = {10.1145/3786582.3786832},
+  pdf       = {3786582.3786832.pdf},
+  abstract     = {Large Language Model (LLM) agents are increasingly embedded in software engineering (SE) workflows—planning, coding, testing, and CI/CD. Failures are frequent: prompt injection, unsafe tool use, supply-chain contamination, and memory poisoning. Existing defences—such as static analysers, provenance attestation, and prompt guardrails—are insufficient: they typically audit after-the-fact or operate without cryptographic guarantees or runtime enforcement. We propose TraceCaps, a runtime approach that (i) attaches cryptographically verifiable provenance capsules to each agent step (e.g. prompt, memory, tool call), and (ii) computes a monotone, persistent risk score that gates tool actions inline via policy thresholds (allow, warn, block). Capsules hash and sign events, link to parents, and embed risk features; an accumulator prevents “risk laundering” by subsequent benign steps. Early demonstrations on SWE-bench illustrate how TraceCaps can expose unsafe behaviors and apply runtime governance through risk accumulation, pointing toward enforceable agent safety. To our knowledge, TraceCaps is the first approach to bind provenance and risk into a single cryptographic substrate, pointing toward a shift from passive audit to runtime, enforceable safety in agentic SE workflows.},
+}
+
+@inproceedings{issta_2025,
   author       = "Mamede, Claudia and Campos, Jos{\'e} and Le Goues, Claire and Abreu, Rui",
   title        = "Interpretable Vulnerability Reports",
-  howpublished = "ASE 2025",
+  booktitle    = "IEEE/ACM International Conference on Automated Software Engineering (ASE)",
   month        = "November",
   year         = "2025",
-  note         = "✅ Accepted at ASE'25 🇰🇷",
   annote       = "(Artifacts)[https://anonymous.4open.science/r/interpretable-reports/README.md]",
   abstract = {Software security faces a persistent gap: static analysis tools detect vulnerabilities effectively, but their technical outputs remain inaccessible to most developers. This leads to mounting security debt, as organizations must rely on security specialists for remediation, creating bottlenecks that delay fixes.
 This paper proposes an interpretability convention and a modular workflow that transforms raw static analyzer outputs into clear, actionable vulnerability reports for all developers, not just security experts. Our tool, secgen, automates the workflow by parsing static analyzer outputs and restructuring them into clear, developer-friendly reports based on our convention, and enforcing compliance through automated validation.
@@ -25,9 +55,10 @@ We validated our approach through a user study with 25 developers, comparing our
   howpublished = "LLM4Code (co-located with ICSE 2025)",
   month        = "July",
   year         = "2024",
-  note         = "✅ Accepted 🏆 Won Best Paper Award at LLM4Code (co-located with ICSE25) 🇨🇦",
+  note         = "🏆 Won Best Paper Award at LLM4Code (co-located with ICSE25) 🇨🇦",
   annote       = "",
   pdf={2411.13323v2.pdf},
+  abstract     = {Large Language Models (LLMs) have become integral to various software engineering tasks, including code generation, bug detection, and repair. To evaluate model performance in these domains, numerous bug benchmarks containing real-world bugs from software projects have been developed. However, a growing concern within the software engineering community is that these benchmarks may not reliably reflect true LLM performance due to the risk of data leakage. Despite this concern, limited research has been conducted to quantify the impact of potential leakage. In this paper, we systematically evaluate popular LLMs to assess their susceptibility to data leakage from widely used bug benchmarks. To identify potential leakage, we use multiple metrics, including a study of benchmark membership within commonly used training datasets, as well as analyses of negative log-likelihood and 5-gram accuracy. Our findings show that certain models, in particular codegen-multi, exhibit significant evidence of memorization in widely used benchmarks like Defects4J, while newer models trained on larger datasets like LLaMa 3.1 exhibit limited signs of leakage. These results highlight the need for careful benchmark selection and the adoption of robust metrics to adequately assess models capabilities.},
 }
 
 
@@ -81,5 +112,6 @@ selected={true}
   booktitle={2022 IEEE 22nd International Conference on Software Quality, Reliability and Security (QRS)},
   pages={43--52},
   year={2022},
-  organization={IEEE}
+  organization={IEEE},
+  abstract     = {This study evaluates BERT-based models for identifying multiple vulnerability types in Java code. On a synthetic dataset, the best results reach 99\% accuracy and 94\% F1. Reducing bias in the training data lowers F1 by up to 13\%. When evaluated on realistic examples, one model reaches nearly 85\% F1 on vulnerabilities it had not seen during training.},
 }

@@ -8,9 +8,10 @@ module Jekyll
 
             attr_accessor :file_name, :directory
 
-            def initialize(file_name:, directory: nil)
+            def initialize(file_name:, source_file: file_name, directory: nil)
                 self.file_name = file_name
                 self.directory = directory
+                @source_file = source_file
             end
 
             def digest!
@@ -25,16 +26,12 @@ module Jekyll
             end
 
             def file_content
-                local_file_name = file_name.slice((file_name.index('assets/')..-1))
+                local_file_name = @source_file.slice((@source_file.index('assets/')..-1))
                 File.read(local_file_name)
             end
 
             def file_contents
-                is_directory? ? file_content : directory_files_content
-            end
-
-            def is_directory?
-                directory.nil?
+                directory ? file_content + directory_files_content : file_content
             end
         end
 
@@ -43,7 +40,11 @@ module Jekyll
         end
 
         def bust_css_cache(file_name)
-            CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+            CacheDigester.new(
+                file_name: file_name,
+                source_file: file_name.sub(/\.css\z/, '.scss'),
+                directory: '_sass'
+            ).digest!
         end
     end
 end
